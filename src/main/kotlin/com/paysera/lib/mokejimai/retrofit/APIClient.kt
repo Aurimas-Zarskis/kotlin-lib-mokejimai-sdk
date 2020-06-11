@@ -35,10 +35,10 @@ interface APIClient {
     ): Deferred<CompanyAccount>
 
     @GET("user/rest/v1/users/current/addresses")
-    fun getCurrentUserAddresses(): Deferred<MetadataAwareResponse<UserAddress>>
+    fun getUserAddresses(): Deferred<MetadataAwareResponse<UserAddress>>
 
     @PUT("user/rest/v1/users/current/addresses/living_address")
-    fun updateCurrentUserAddress(
+    fun updateUserAddress(
         @Body userAddress: UserAddress
     ): Deferred<UserAddress>
 
@@ -46,16 +46,4 @@ interface APIClient {
     fun getUserAccounts(
         @Path("userId") userId: Int
     ): Deferred<MetadataAwareResponse<UserAccount>>
-
-    @GET("user/rest/v1/users/{userIdentifier}/addresses")
-    fun getUserAddresses(
-        @Path("userIdentifier") userIdentifier: String
-    ): Deferred<MetadataAwareResponse<UserAddress>>
-
-    @PUT("user/rest/v1/users/{userIdentifier}/addresses/{addressType}")
-    fun updateUserAddress(
-        @Path("userIdentifier") userIdentifier: String,
-        @Path("addressType") addressType: String,
-        @Body userAddress: UserAddress
-    ): Deferred<UserAddress>
 }
