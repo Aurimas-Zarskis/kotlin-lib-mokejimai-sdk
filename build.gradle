@@ -34,7 +34,7 @@ dependencies {
 
     implementation 'com.squareup.moshi:moshi:1.9.2'
 
-    implementation ('com.github.aurimas-zarskis:kotlin-lib-common-sdk:731d70c') {
+    implementation ('com.github.aurimas-zarskis:kotlin-lib-common-sdk:5f38f13') {
         exclude group: 'org.json', module: 'json'
     }
 
