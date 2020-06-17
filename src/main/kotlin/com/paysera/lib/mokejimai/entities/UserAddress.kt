@@ -21,7 +21,7 @@ data class UserAddress(
     @Json(name = "street_name")
     var streetName: String,
     @Json(name = "house_number")
-    var houseNumber: String,
+    var houseNumber: String?,
     @Json(name = "apartment_number")
-    var apartmentNumber: String
+    var apartmentNumber: String?
 )

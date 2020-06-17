@@ -17,7 +17,7 @@ data class ManualTransferConfiguration(
     @Json(name = "to_country_code")
     var toCountryCode: String,
     @Json(name = "to_iban")
-    var toIban: String,
+    var toIban: String?,
     @Json(name = "to_bic")
     var toBic: String,
     @Json(name = "to_beneficiary_name")
