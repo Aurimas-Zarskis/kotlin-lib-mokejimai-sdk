@@ -10,5 +10,5 @@ data class UserAccount(
     @Json(name = "display_name")
     val displayName: String?,
     val type: String,
-    val code: Long?
+    val code: String?
 )
