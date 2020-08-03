@@ -18,6 +18,8 @@ data class UserAddress(
     var postalCode: String,
     @Json(name = "legacy_address")
     var legacyAddress: String?,
+    @Json(name = "legacy_city_name")
+    var legacyCityName: String?,
     @Json(name = "street_name")
     var streetName: String,
     @Json(name = "house_number")
